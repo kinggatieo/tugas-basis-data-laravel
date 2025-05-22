@@ -1,74 +1,66 @@
-# tugas-basis-data-laravel
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-ok jadi pertama anda perlu mendownload xampp sebagai tempat database
-✅ Langkah 1: Buka Website Resmi XAMPP
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-    Kunjungi situs resmi XAMPP di: https://www.apachefriends.org/index.html
+## About Laravel
 
-✅ Langkah 2: Pilih Versi XAMPP
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-    Di halaman utama, kamu akan melihat tombol unduh untuk berbagai sistem operasi:
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-        Windows
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-        Linux
+## Learning Laravel
 
-        macOS
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-Klik tombol "Download" untuk Windows.
+You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-    💡 Pilih versi PHP sesuai kebutuhan. Versi terbaru biasanya sudah cukup.
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-✅ Langkah 3: Mulai Proses Download
+## Laravel Sponsors
 
-    Setelah kamu klik tombol download, file instalasi akan mulai diunduh (sekitar 150-200MB).
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-✅ Langkah 4: Instalasi XAMPP
+### Premium Partners
 
-    Setelah file selesai diunduh, klik dua kali file .exe-nya untuk memulai instalasi.
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[Many](https://www.many.co.uk)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[OP.GG](https://op.gg)**
+- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+- **[Lendio](https://lendio.com)**
 
-    Klik "Yes" jika ada peringatan dari Windows (UAC).
+## Contributing
 
-    Ikuti langkah-langkah berikut:
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-        Klik "Next".
+## Code of Conduct
 
-        Pilih komponen yang ingin diinstal (biarkan default saja sudah cukup).
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-        Pilih direktori instalasi, default-nya C:\xampp.
+## Security Vulnerabilities
 
-        Klik "Next" terus sampai muncul tombol "Install".
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-        Klik "Install" dan tunggu prosesnya selesai.
+## License
 
-✅ Langkah 5: Jalankan XAMPP Control Panel
-
-    Setelah instalasi selesai, pastikan opsi "Start Control Panel" dicentang, lalu klik "Finish".
-
-    XAMPP Control Panel akan terbuka. Di sini kamu bisa:
-
-        Klik Start pada Apache dan MySQL untuk menjalankan server web dan database.
-
-✅ Langkah 6: Uji Coba Server
-
-buka control panel aktifkan apache dan mysql, dan di pilihan apache tekan tombol "admin"
-seharusnya akan terbuka tempat database myphpsql
-
-
-setelah itu buat database dengan new database, namanya tergantung anda tapi ingat namanya untuk nanti 
-
-anda perlu ini https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://getcomposer.org/download/&ved=2ahUKEwjo4f_AjreNAxUoS2cHHbGqKg0QjBB6BAgKEAE&usg=AOvVaw0hifbxuQZySOtGjSzPWfJo
-
-setelah composer ter download perintah ini ke command prompt
-composer global require laravel/installer - install laravel
-
-untuk menghidupkan laravel server 
-masukan perintah ini ke command prompt php artisan serve
-
-selamat bercoding database
-
-
-nama database = example-base
-user yang dipakai =laraveluser
-password yang sudah terpakai =laravel123
-
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
