@@ -1,66 +1,161 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📘 Panduan Lengkap Instalasi Laravel di Windows (dengan XAMPP)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Dokumentasi ini menjelaskan secara lengkap cara menyiapkan proyek Laravel di Windows menggunakan XAMPP, PHP, Composer, dan Laravel Installer. Fokus utama adalah penggunaan Laravel dan Eloquent ORM.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📦 Persyaratan Awal
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- ✅ XAMPP (sudah termasuk PHP & MySQL)
+- ✅ Composer (manajer paket untuk PHP)
+- ✅ Laravel Installer (melalui Composer)
+- ✅ Editor kode seperti VS Code
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🔧 Langkah 1: Instalasi XAMPP
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. Unduh XAMPP di: [https://www.apachefriends.org/index.html](https://www.apachefriends.org/index.html)
+2. Instal menggunakan pengaturan default.
+3. Jalankan **Apache** dan **MySQL** melalui XAMPP Control Panel.
+4. Cek apakah PHP tersedia:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+   ```bash
+   C:\xampp\php\php.exe -v
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+⚙️ Langkah 2: Menambahkan PHP ke PATH (User Environment Variable)
 
-## Laravel Sponsors
+Agar perintah php bisa dikenali di Command Prompt:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+    Buka Start Menu → cari: Edit environment variables for your account
 
-### Premium Partners
+    Di bagian User variables, cari Path → klik Edit
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+    Klik New → masukkan:
 
-## Contributing
+C:\xampp\php
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Klik OK pada semua jendela.
 
-## Code of Conduct
+Tutup dan buka kembali cmd, lalu cek:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    php -v
 
-## Security Vulnerabilities
+📥 Langkah 3: Instal Composer
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    Unduh Composer di: https://getcomposer.org/download/
 
-## License
+    Jalankan installer dan arahkan ke:
+    C:\xampp\php\php.exe
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    Setelah selesai, cek dengan:
+
+    composer -V
+
+🚀 Langkah 4: Instal Laravel
+
+Install Laravel secara global:
+
+composer global require laravel/installer
+
+    Tambahkan direktori Composer ke PATH agar perintah laravel bisa dipakai:
+
+%USERPROFILE%\AppData\Roaming\Composer\vendor\bin
+
+Lalu uji:
+
+laravel --version
+
+🧪 Langkah 5: Membuat Proyek Laravel Baru
+
+laravel new nama-proyek-anda
+cd nama-proyek-anda
+php artisan serve
+
+Akses aplikasi di: http://localhost:8000
+⚙️ Langkah 6: Konfigurasi Database (.env)
+
+Edit file .env:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database
+DB_USERNAME=root
+DB_PASSWORD=
+
+    Gunakan phpMyAdmin (via http://localhost/phpmyadmin) untuk membuat database.
+
+🧱 Langkah 7: Membuat Model, Migration, dan Controller
+
+Contoh: membuat Post
+
+php artisan make:model Post -mcr
+
+Edit file migration di database/migrations/xxxx_xx_xx_create_posts_table.php:
+
+$table->string('title');
+$table->text('content');
+
+Jalankan migration:
+
+php artisan migrate
+
+🧠 Contoh Penggunaan ORM Eloquent
+🔹 Membuat Data
+
+Post::create([
+  'title' => 'Judul Pertama',
+  'content' => 'Ini konten pertama.'
+]);
+
+🔹 Menampilkan Semua Data
+
+$posts = Post::all();
+
+🔹 Mengupdate Data
+
+$post = Post::find(1);
+$post->title = 'Judul Baru';
+$post->save();
+
+🔹 Menghapus Data
+
+$post = Post::find(1);
+$post->delete();
+
+🎯 Kesimpulan
+
+Dengan mengikuti panduan ini, kamu telah:
+
+    Menginstal XAMPP, PHP, Composer
+
+    Mengatur Laravel menggunakan Laravel Installer
+
+    Membuat proyek Laravel baru
+
+    Menghubungkan ke database
+
+    Menggunakan Eloquent ORM untuk manipulasi data
+
+Laravel adalah framework modern yang sangat kuat dengan sintaks yang elegan dan didukung oleh komunitas besar. Cocok untuk pengembangan aplikasi web dari skala kecil hingga besar.
+✅ Rekomendasi Lanjutan
+
+    Pelajari Eloquent Relationships (One-to-Many, Many-to-Many)
+
+    Gunakan Laravel Tinker untuk testing via CLI
+
+    Implementasi fitur autentikasi dengan:
+
+    php artisan ui bootstrap --auth
+    npm install && npm run dev
+
+
+---
+
+### 📌 Cara Pakai
+
+1. Simpan file ini sebagai `README.md` di dalam folder proyek Laravel kamu
+2. Buka dengan editor seperti VS Code atau tampilkan langsung di GitHub
+
+Kalau kamu ingin ditambahkan bagian **diagram alur Eloquent**, **struktur folder Laravel**, atau contoh proyek mini seperti blog atau todo app, tinggal bilang saja!
