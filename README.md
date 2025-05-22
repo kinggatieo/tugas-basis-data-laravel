@@ -66,3 +66,9 @@ untuk menghidupkan laravel server
 masukan perintah ini ke command prompt php artisan serve
 
 selamat bercoding database
+
+
+nama database = example-base
+user yang dipakai =laraveluser
+password yang sudah terpakai =laravel123
+
