@@ -61,38 +61,8 @@ anda perlu ini https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url
 
 setelah composer ter download perintah ini ke command prompt
 composer global require laravel/installer - install laravel
-laravel new my-project - membuat laravel project
-php artisan serve - membuka server laravel (seharusnya dikasih host untuk membuka webpage)
-composer require illuminate/database - download database dalam laravel
 
-ok seharusnya sudah selesai konfigurasi sekarang untuk konfigurasi files
+untuk menghidupkan laravel server 
+masukan perintah ini ke command prompt php artisan serve
 
-php artisan make:model User - untuk membuat file user (seharusnya sudah ada dari default jadi akan dikasih prompt bahwa file sudah ada)
-php artisan migrate -  ini untuk memigrasi semua file resource ke laravel untuk di display
-php artisan migrate:status - check migrasi status 
-
-jika tidak ada error mantap lah 
-
-sekarang masukan kode ini 
-php artisan tinker
-
-dan ini setelah di atas
-User::create([
-    'name' => 'John Doe',
-    'email' => 'john@example.com',
-    'password' => bcrypt('secret'),
-]);
-
-hidupkan server dan seharusnya sudah ada hasil
-
-(ada beberapa hal kecil yang perlu di customize seperti di file .env dalam file project mu untuk mengubah ini
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE= nama base dalam xampp
-DB_USERNAME= user xampp
-DB_PASSWORD= password xampp
-
-dan di dalam file projectmu/resources/views/user/ 
-isi index.blade.php (gunakan virtual studio code untuk mengisi)
-)
+selamat bercoding database
