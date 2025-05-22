@@ -153,9 +153,8 @@ Laravel adalah framework modern yang sangat kuat dengan sintaks yang elegan dan 
 
 ---
 
-### 📌 Cara Pakai
+untuk file yang di dalam reposetory ini copy paste saja ke dalam file project anda dan silahkan mengkostumasi
 
-1. Simpan file ini sebagai `README.md` di dalam folder proyek Laravel kamu
-2. Buka dengan editor seperti VS Code atau tampilkan langsung di GitHub
-
-Kalau kamu ingin ditambahkan bagian **diagram alur Eloquent**, **struktur folder Laravel**, atau contoh proyek mini seperti blog atau todo app, tinggal bilang saja!
+nama database = example-base
+nama user = laraveluser
+password = laravel123
